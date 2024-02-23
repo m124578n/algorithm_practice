@@ -24,7 +24,17 @@ def check_is_sorting(target: list) -> bool:
     return True
 
 
+def bubble_sort(target: list) -> list:
+    n = len(target)
+    while n > 1:
+        for x in range(0, n-1):
+            if target[x] > target[x+1]:
+                target[x], target[x+1] = target[x+1], target[x]
+        n -= 1
+    return target
+
+
 if __name__ == '__main__':
     target = [5, 2, 0, 4, 9, 8, 7, 100, -5]
-    ans = sorting_by_swap(target)
+    ans = bubble_sort(target)
     print(ans)
