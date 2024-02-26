@@ -54,6 +54,11 @@ class MaxPriorityQueue:
         self.heap[a] = self.heap[b]
         self.heap[b] = temp
 
+pq = MaxPriorityQueue([1,6]) # 建立一個有 1, 6 的 PriorityQueue
+pq.insert(2) # 插入一個值為 2 的點
+max = pq.extractMax() # 取出最大值
+print(pq.heap) # 如果想看到操作情形，可以直接印出目前的 heap 
+
 
 #####################################################################
 #####################################################################
